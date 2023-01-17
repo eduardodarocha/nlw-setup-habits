@@ -8,10 +8,12 @@
 
 - NodeJS
 - Fastify (Framework) 
-- Typescript 
+- Typescript
+- ORM - Prisma
+- CORS - Cross Origin Resource Sharingcd server
 
 
-####
+### Setup Backend - Pasta \server
 npm init -y
 npm i fastify
 npm install typescript -D
@@ -26,7 +28,8 @@ criar script no package.json para rodar o projeto com o comando "npm run dev"
 ORM - Prisma
 npm i prisma -D
 npm i @prisma/client
-npx prisma init --datasource-provider SQLite 
+npx prisma init --datasource-provider SQLite
+
 ------->>>>>> 
 ✔ Your Prisma schema was created at prisma/schema.prisma
   You can now open it in your favorite editor.
@@ -39,6 +42,14 @@ Next steps:
 More information in our documentation:
 https://pris.ly/d/getting-started
 ------->>>>>>
+Criar o modelo(model) de dados no arquivo schema.prisma ->
+model Habit {
+  id         String   @id @default(uuid())
+  title      String
+  created_at DateTime
+
+  @@map("habits") //cria alias para a tabela
+}
 
 npx prisma migrate dev
 // Criar uma migration - colocar o que foi feito desde a ultima migration.
@@ -50,3 +61,21 @@ npx prisma studio
 
 CORS - Cross Origin Resource Sharing 
 npm i @fastify/cors
+
+### Setup Frontend - Pasta \web
+npm create vite@latest
+-> app name: web
+-> framework: React
+-> variant: Typescript
+cd web
+npm install
+npm run dev
+
+npm i -D tailwindcss postcss autoprefixer
+
+No arquivo "tailwind.config.cjs" adicionar ->
+content: [
+    './src/**/*.tsx',
+    './index.html'
+  ],
+npx tailwindcss init -p

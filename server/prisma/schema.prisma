@@ -11,13 +11,9 @@ datasource db {
 }
 
 model Habit {
-  id        String   @id @default(uuid())
-  title     String
-  createdAt DateTime @default(now())
+  id         String   @id @default(uuid())
+  title      String
+  created_at DateTime
 
-  // updatedAt DateTime @updatedAt
-  // deletedAt DateTime?
-  // user      User     @relation(fields: [userId], references: [id])
-  // userId    Int
   @@map("habits")
 }
