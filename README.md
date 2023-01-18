@@ -19,6 +19,7 @@
 - Expo - Ferramenta para desenvolvimento mobile
 - zod - Validador de dados
 - dayjs - Manipulação de datas
+- phosphor-react - Icones
 
 
 ### Setup Backend - Pasta \server
@@ -116,7 +117,7 @@ npx prisma db seed
 npm i zod
 npm i dayjs
 
-
+Aula-3
 
 ### Setup Frontend - Pasta \web
 npm create vite@latest
@@ -135,6 +136,9 @@ content: [
     './index.html'
   ],
 npx tailwindcss init -p
+
+Aula-2
+npm i phosphor-react
 
 ### Setup Mobile - Pasta \mobile
 Configurar ambiente de desenvolvimento para React Native
