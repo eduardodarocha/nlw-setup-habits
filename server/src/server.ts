@@ -1,10 +1,9 @@
 // Back-end API Restful
 import Fastify from "fastify";
 import cors from "@fastify/cors";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "./lib/prisma";
 
 const app = Fastify();
-const prisma = new PrismaClient();
 
 app.register(cors);
 
@@ -12,16 +11,7 @@ app.register(cors);
  * Method http: GET, POST, PUT, PATCH , DELETE
  */
 
-app.get("/hello", async () => {
-  const habits = await prisma.habit.findMany({
-    // where: {
-    //   title: {
-    //     startsWith: "Beber",
-    //   },
-    // },
-  });
-  return habits;
-});
+
 app
   .listen({
     port: 3333,

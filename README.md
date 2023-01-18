@@ -8,15 +8,22 @@
 
 - NodeJS
 - Fastify (Framework) 
-- Typescript
-- ORM - Prisma
+- Typescript 
+- Prisma - ORM - Object Relational Mapping
 - CORS - Cross Origin Resource Sharingcd server
 - React
 - Vite
 - Tailwindcss
+- React Native
+- Prisma Entity Relationship Diagram Generator (prisma-erd-generator)
+- Expo
+- mermaid-cli
 
 
 ### Setup Backend - Pasta \server
+
+Aula-1
+
 npm init -y
 npm i fastify
 npm install typescript -D
@@ -64,6 +71,48 @@ npx prisma studio
 
 CORS - Cross Origin Resource Sharing 
 npm i @fastify/cors
+---------------------------------------------
+
+Aula-2
+
+Create new model in schema.prisma ->
+HabitWeekDays, Day e DayHabit
+npx prisma migrate dev  //new migration
+npx prisma studio //visualizar o DB
+
+created relationship between Habit and HabitWeekDays
+npx prisma migrate dev
+
+Utilizar Prisma Entity Relationship Diagram Generator (prisma-erd-generator) 
+para gerar o diagrama de relacionamento entre as tabelas
+https://www.npmjs.com/package/prisma-erd-generator
+
+npm i -D prisma-erd-generator @mermaid-js/mermaid-cli
+
+Add to your schema.prisma:
+generator erd {
+  provider = "prisma-erd-generator"
+}
+
+Run the generator:
+npx prisma generate
+
+cria um ERD.svg na pasta prisma
+-------
+Criar seeds para popular o DB
+criar arquivo na pasta prisma com o nome seed.ts
+e colocar o conteúdo do arquivo seed.ts da pasta aula-2 (https://efficient-sloth-d85.notion.site/Materiais-Aula-2-eb53491dfb0c45d88e7a9ecc8c5026f8) 
+
+acrescentar as linhas abaixo no arquivo package.json:
+
+"prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+
+npx prisma db seed
+------
+
+
 
 ### Setup Frontend - Pasta \web
 npm create vite@latest
