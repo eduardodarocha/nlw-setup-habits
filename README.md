@@ -11,6 +11,9 @@
 - Typescript
 - ORM - Prisma
 - CORS - Cross Origin Resource Sharingcd server
+- React
+- Vite
+- Tailwindcss
 
 
 ### Setup Backend - Pasta \server
@@ -79,3 +82,22 @@ content: [
     './index.html'
   ],
 npx tailwindcss init -p
+
+### Setup Mobile - Pasta \mobile
+Configurar ambiente de desenvolvimento para React Native
+https://react-native.rocketseat.dev/
+
+npm install -g expo-cli
+
+criar projeto com expo:
+npx create-expo-app mobile --template
+cd mobile
+npx expo start
+npx expo start --clear (para limpar o cache)
+Comando "a" para abrir o emulador
+
+Baixar a pasta aula-1 (https://drive.google.com/drive/folders/1lq5kcOCN0tWqrvULu_SkDoMrgy9jpIo-)
+ecolocar o conteúdo da pasta assets na pasta assets do projeto e src/assets no raiz do projeto
+
+Customizar fontes do Google Fonts (https://docs.expo.dev/guides/using-custom-fonts/)
+npx expo install expo-font @expo-google-fonts/inter
