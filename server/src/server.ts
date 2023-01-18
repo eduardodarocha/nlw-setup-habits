@@ -1,15 +1,12 @@
 // Back-end API Restful
 import Fastify from "fastify";
 import cors from "@fastify/cors";
-import { prisma } from "./lib/prisma";
+import { appRoutes } from "./routes";
 
 const app = Fastify();
 
 app.register(cors);
-
-/**
- * Method http: GET, POST, PUT, PATCH , DELETE
- */
+app.register(appRoutes)
 
 
 app

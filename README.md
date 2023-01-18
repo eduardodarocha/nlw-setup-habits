@@ -6,18 +6,19 @@
 
 ## Tecnologias utilizadas
 
-- NodeJS
-- Fastify (Framework) 
-- Typescript 
+- NodeJS - Backend
+- Fastify (Framework) - Ferramenta para criar API's
+- Typescript
 - Prisma - ORM - Object Relational Mapping
 - CORS - Cross Origin Resource Sharingcd server
-- React
-- Vite
-- Tailwindcss
-- React Native
+- React - Frontend
+- Vite - Ferramenta de build
+- Tailwindcss - Framework CSS
+- React Native - Mobile
 - Prisma Entity Relationship Diagram Generator (prisma-erd-generator)
-- Expo
-- mermaid-cli
+- Expo - Ferramenta para desenvolvimento mobile
+- zod - Validador de dados
+- dayjs - Manipulação de datas
 
 
 ### Setup Backend - Pasta \server
@@ -111,6 +112,9 @@ acrescentar as linhas abaixo no arquivo package.json:
 
 npx prisma db seed
 ------
+
+npm i zod
+npm i dayjs
 
 
 
