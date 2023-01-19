@@ -18,7 +18,7 @@
 - Prisma Entity Relationship Diagram Generator (prisma-erd-generator)
 - Expo - Ferramenta para desenvolvimento mobile
 - zod - Validador de dados
-- dayjs - Manipulação de datas
+- dayjs - Manipulação de datas (https://day.js.org/)
 - phosphor-react - Icones
 - Nativewind - Framework CSS para React Native
 
@@ -179,3 +179,7 @@ configurar o metro.config.js e Using typescript
 
 importar @expo/vector-icons no Header.tsx
 (oblador.github.io/react-native-vector-icons/)
+
+Install dayjs
+npm i dayjs
+configurar dayjs para pt-br criando pasta lib/dayjs.ts
