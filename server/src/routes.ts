@@ -121,6 +121,39 @@ export async function appRoutes(app: FastifyInstance) {
     }
   })
 
+  //Query mais complexa, mais condições , relacionamentos => query raw - Sql na mão
+  // Neste caso, não é possível usar o prisma, pois não é possível fazer a query com o prisma
+  // O prisma não tem suporte para query raw
+  // RAW SQL -SQLite
+  //Subquery - query dentro de outra query
+  app.get('/summary', async () => {
+    const summary = await prisma.$queryRaw`
+      SELECT 
+        D.id, 
+        D.date,
+        (
+          SELECT 
+            cast(count(*) as float)
+          FROM day_habits DH
+          WHERE DH.day_id = D.id
+        ) as completed,
+        (
+          SELECT
+            cast(count(*) as float)
+          FROM habit_week_days HDW
+          JOIN habits H
+            ON H.id = HDW.habit_id
+          WHERE
+            HDW.week_day = cast(strftime('%w', D.date/1000.0, 'unixepoch') as int)
+            AND H.created_at <= D.date
+        ) as amount
+      FROM days D
+    `
+
+    return summary
+  })
+
+
   }
 
 
