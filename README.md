@@ -20,6 +20,7 @@
 - zod - Validador de dados
 - dayjs - Manipulação de datas
 - phosphor-react - Icones
+- Nativewind - Framework CSS para React Native
 
 
 ### Setup Backend - Pasta \server
@@ -158,3 +159,14 @@ ecolocar o conteúdo da pasta assets na pasta assets do projeto e src/assets no 
 
 Customizar fontes do Google Fonts (https://docs.expo.dev/guides/using-custom-fonts/)
 npx expo install expo-font @expo-google-fonts/inter
+
+Aula-2
+
+Nativewind -  https://www.nativewind.dev/
+
+npm i nativewind
+npm i tailwindcss --save-dev
+
+npx tailwindcss init
+configurar o arquivo tailwind.config.js
+adicionar ao babel.config.js -> plugins: ["nativewind/babel"],
