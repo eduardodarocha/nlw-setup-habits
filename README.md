@@ -170,3 +170,12 @@ npm i tailwindcss --save-dev
 npx tailwindcss init
 configurar o arquivo tailwind.config.js
 adicionar ao babel.config.js -> plugins: ["nativewind/babel"],
+
+npx expo install react-native-svg  //instalar dependencia para usar svg
+
+react-native-svg-transformer (https://github.com/kristerkari/react-native-svg-transformer)
+npm install react-native-svg-transformer --save-dev
+configurar o metro.config.js e Using typescript
+
+importar @expo/vector-icons no Header.tsx
+(oblador.github.io/react-native-vector-icons/)
