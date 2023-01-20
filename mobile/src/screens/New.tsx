@@ -33,6 +33,7 @@ export function New() {
       setWeekDays([]);
 
       Alert.alert('Novo hábito', 'Hábito criado com sucesso!');
+      
     } catch (error) {
       console.log(error)
       Alert.alert('Ops', 'Não foi possível criar o novo hábito')
@@ -57,7 +58,7 @@ export function New() {
 
         <TextInput 
           className="h-12 pl-4 rounded-lg mt-3 bg-zinc-900 text-white border-2 border-zinc-800 focus:border-green-600"
-          placeholder="Exercícios, dormir bem, estudar, etc..."
+          placeholder="Exercícios, dormir bem, etc..."
           placeholderTextColor={colors.zinc[400]}
           onChangeText={setTitle}
           value={title}
