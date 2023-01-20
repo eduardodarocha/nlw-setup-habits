@@ -22,6 +22,7 @@
 - phosphor-react - Icones
 - Nativewind - Framework CSS para React Native
 - radix-ui - Low-level UI component library with a focus on accessibility (https://www.radix-ui.com/)
+- clsx - A tiny (228B) utility for constructing `className` strings conditionally
 
 
 ### Setup Backend - Pasta \server
@@ -152,6 +153,8 @@ npm install @radix-ui/react-dialog
 npm install @radix-ui/react-popover
 
 npm install @radix-ui/react-checkbox
+
+npm i clsx
 
 
 ### Setup Mobile - Pasta \mobile
