@@ -23,6 +23,7 @@
 - Nativewind - Framework CSS para React Native
 - radix-ui - Low-level UI component library with a focus on accessibility (https://www.radix-ui.com/)
 - clsx - A tiny (228B) utility for constructing `className` strings conditionally
+- reactnavigation - Navegação entre telas (https://reactnavigation.org/)
 
 
 ### Setup Backend - Pasta \server
@@ -158,6 +159,9 @@ npm i clsx
 
 
 ### Setup Mobile - Pasta \mobile
+
+Aula-1 
+
 Configurar ambiente de desenvolvimento para React Native
 https://react-native.rocketseat.dev/
 
@@ -199,3 +203,9 @@ importar @expo/vector-icons no Header.tsx
 Install dayjs
 npm i dayjs
 configurar dayjs para pt-br criando pasta lib/dayjs.ts
+
+Aula - 3
+
+npm install @react-navigation/native 
+npx expo install react-native-screens react-native-safe-area-context 
+npm install @react-navigation/native-stack //estratégia de navegação para mobile - stack
