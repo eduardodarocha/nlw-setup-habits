@@ -21,6 +21,7 @@
 - dayjs - Manipulação de datas (https://day.js.org/)
 - phosphor-react - Icones
 - Nativewind - Framework CSS para React Native
+- radix-ui - Low-level UI component library with a focus on accessibility (https://www.radix-ui.com/)
 
 
 ### Setup Backend - Pasta \server
@@ -117,8 +118,9 @@ npx prisma db seed
 
 npm i zod
 npm i dayjs
-
+----------------------------
 Aula-3
+Criação das rotas day, habit toggle e summary
 
 ### Setup Frontend - Pasta \web
 npm create vite@latest
@@ -137,9 +139,18 @@ content: [
     './index.html'
   ],
 npx tailwindcss init -p
+---------------------------------------
 
 Aula-2
+
 npm i phosphor-react
+
+---------------------------------------
+Aula 3
+npm install @radix-ui/react-dialog
+
+npm install @radix-ui/react-checkbox
+
 
 ### Setup Mobile - Pasta \mobile
 Configurar ambiente de desenvolvimento para React Native
