@@ -1,7 +1,8 @@
 import { ScrollView, Text, View } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import dayjs from "dayjs";
-import 'dayjs/locale/pt-br';
+// import 'dayjs/locale/pt-br';
+// dayjs.locale('pt-br')
 
 import { BackButton } from "../components/BackButton";
 import { ProgressBar } from "../components/Progress.Bar";

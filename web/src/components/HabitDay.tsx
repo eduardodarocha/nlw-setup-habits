@@ -5,6 +5,7 @@ import { ProgressBar } from './ProgressBar';
 import { Check } from 'phosphor-react';
 import dayjs from 'dayjs';
 
+
 interface HabitDayProps {
   date: Date
   completed?: number

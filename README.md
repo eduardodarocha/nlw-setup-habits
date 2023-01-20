@@ -123,7 +123,7 @@ npm i dayjs
 ----------------------------
 Aula-3
 Criação das rotas day, habit toggle e summary
-
+--------------------------------------------------------------------------------
 ### Setup Frontend - Pasta \web
 npm create vite@latest
 -> app name: web
@@ -132,6 +132,7 @@ npm create vite@latest
 cd web
 npm install
 npm run dev
+(npm run dev -- --host) -> para expor o projeto para outros dispositivos na mesma rede
 
 npm i -D tailwindcss postcss autoprefixer
 
@@ -157,6 +158,12 @@ npm install @radix-ui/react-checkbox
 
 npm i clsx
 
+Aula 4
+
+npm i axios
+
+
+--------------------------------------------------------------------------------
 
 ### Setup Mobile - Pasta \mobile
 
@@ -174,10 +181,13 @@ npx expo start
 npx expo start --clear (para limpar o cache)
 Comando "a" para abrir o emulador
 
-Baixar a pasta aula-1 (https://drive.google.com/drive/folders/1lq5kcOCN0tWqrvULu_SkDoMrgy9jpIo-)
-ecolocar o conteúdo da pasta assets na pasta assets do projeto e src/assets no raiz do projeto
+Baixar a pasta aula-1
+ (https://drive.google.com/drive/folders/1lq5kcOCN0tWqrvULu_SkDoMrgy9jpIo-)
+ecolocar o conteúdo da pasta assets na pasta assets do projeto e 
+src/assets no raiz do projeto
 
-Customizar fontes do Google Fonts (https://docs.expo.dev/guides/using-custom-fonts/)
+Customizar fontes do Google Fonts 
+(https://docs.expo.dev/guides/using-custom-fonts/)
 npx expo install expo-font @expo-google-fonts/inter
 
 Aula-2
