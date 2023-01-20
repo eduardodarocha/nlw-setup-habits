@@ -149,6 +149,8 @@ npm i phosphor-react
 Aula 3
 npm install @radix-ui/react-dialog
 
+npm install @radix-ui/react-popover
+
 npm install @radix-ui/react-checkbox
 
 
