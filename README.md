@@ -219,3 +219,9 @@ Aula - 3
 npm install @react-navigation/native 
 npx expo install react-native-screens react-native-safe-area-context 
 npm install @react-navigation/native-stack //estratégia de navegação para mobile - stack
+
+Aula - 4
+
+npm i axios
+
+no arquivo /lib/axios.ts adicionar baseURL: 'http://endereco-ip-seu-computador:3333' e não localhost
