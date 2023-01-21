@@ -226,3 +226,15 @@ npm i axios
 
 no arquivo /lib/axios.ts adicionar baseURL: 'http://endereco-ip-seu-computador:3333' e não localhost
 (com ip do meu computador não funcionou, tive que usar o http://10.0.2.2:3333) para android studio.
+
+
+--------------------------------------------------------------------------------
+
+Next level:
+- Autenticação:
+fairebase
+Auth0
+- Notificação push:
+Mobile ->  expo-notifications
+Web - Service Workers
+- Perfil publico do usuário com gráficos de progresso/resumo(sem acesso aos hábitos)
