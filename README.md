@@ -241,6 +241,8 @@ Next level Web:
 - Autenticação:
 fairebase
 Auth0
+Login social (conta Google, Facebook, Github)
+
 - Notificação push:
 Mobile ->  expo-notifications
 Web - Service Workers
