@@ -65,7 +65,7 @@ export async function appRoutes(app: FastifyInstance) {
 
     const completedHabits = day?.dayHabits.map(dayHabit => {
       return dayHabit.habit_id
-    })
+    }) ?? []
 
     return {
       possibleHabits,
@@ -121,11 +121,6 @@ export async function appRoutes(app: FastifyInstance) {
     }
   })
 
-  //Query mais complexa, mais condições , relacionamentos => query raw - Sql na mão
-  // Neste caso, não é possível usar o prisma, pois não é possível fazer a query com o prisma
-  // O prisma não tem suporte para query raw
-  // RAW SQL -SQLite
-  //Subquery - query dentro de outra query
   app.get('/summary', async () => {
     const summary = await prisma.$queryRaw`
       SELECT 
@@ -152,8 +147,4 @@ export async function appRoutes(app: FastifyInstance) {
 
     return summary
   })
-
-
-  }
-
-
+}
