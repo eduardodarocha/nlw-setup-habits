@@ -24,6 +24,7 @@
 - radix-ui - Low-level UI component library with a focus on accessibility (https://www.radix-ui.com/)
 - clsx - A tiny (228B) utility for constructing `className` strings conditionally
 - reactnavigation - Navegação entre telas (https://reactnavigation.org/)
+- react-native-reanimated - React Native's Animated library reimplemented (https://docs.swmansion.com/react-native-reanimated/)
 
 
 ### Setup Backend - Pasta \server
@@ -229,7 +230,9 @@ no arquivo /lib/axios.ts adicionar baseURL: 'http://endereco-ip-seu-computador:3
 
 Aula - 5
 
+npx expo install react-native-reanimated
 
+adicionar ao babel.config.js -> plugins: ["react-native-reanimated/plugin"]
 
 
 --------------------------------------------------------------------------------
