@@ -25,6 +25,7 @@
 - clsx - A tiny (228B) utility for constructing `className` strings conditionally
 - reactnavigation - Navegação entre telas (https://reactnavigation.org/)
 - react-native-reanimated - React Native's Animated library reimplemented (https://docs.swmansion.com/react-native-reanimated/)
+- web-push - Web Push library for Node.js
 
 
 ### Setup Backend - Pasta \server
@@ -247,3 +248,9 @@ Login social (conta Google, Facebook, Github)
 Mobile ->  expo-notifications
 Web - Service Workers
 - Perfil publico do usuário com gráficos de progresso/resumo(sem acesso aos hábitos)
+-------------------------------------------------------------------------------------
+
+Aula Extra - Push Notifications
+Dentro da pasta server:
+npm i web-push
+npm i @types/web-push -D
