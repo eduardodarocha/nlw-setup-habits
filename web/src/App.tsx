@@ -3,8 +3,31 @@ import './lib/dayjs';
 
 import { Header } from './components/Header';
 import { SummaryTable } from './components/SummaryTable';
+import { api } from './lib/axios';
 
-navigator.serviceWorker.register('service-worker.js');
+navigator.serviceWorker.register('service-worker.js')
+  .then(async serviceWorker => {
+    let subscription = await serviceWorker.pushManager.getSubscription()
+    if (!subscription) {
+      const publicKeyResponse = await api.get('/push/public_key');
+
+      subscription = await serviceWorker.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: publicKeyResponse.data.publicKey,
+      })
+    }
+
+    // console.log(subscription)
+    await api.post('/push/register', {
+      subscription
+    })
+
+    await api.post('/push/send', {
+      subscription
+    })
+
+  })
+  ;
 
 // import { Habit } from "./components/Habit";
 
@@ -18,7 +41,7 @@ navigator.serviceWorker.register('service-worker.js');
 //       icon: "https://www.flaticon.com/svg/static/icons/svg/2919/2919600.svg"
 //     })
 //   }
-  
+
 // })
 
 
@@ -33,7 +56,7 @@ export function App() {
   //           icon: "https://cdn-icons-png.flaticon.com/512/6700/6700461.png"
   //         })
   //       }
-        
+
   //     })
   // }
   return (
@@ -42,7 +65,7 @@ export function App() {
         {/* <button onClick={sendNotification}>Send Notification</button> */}
         <Header />
         <SummaryTable />
-        
+
       </div>
     </div>
 
