@@ -26,6 +26,7 @@
 - reactnavigation - Navegação entre telas (https://reactnavigation.org/)
 - react-native-reanimated - React Native's Animated library reimplemented (https://docs.swmansion.com/react-native-reanimated/)
 - web-push - Web Push library for Node.js
+- expo-notifications - Expo Notifications API (https://docs.expo.io/versions/latest/sdk/notifications/)
 
 
 ### Setup Backend - Pasta \server
@@ -254,3 +255,7 @@ Aula Extra - Push Notifications
 Dentro da pasta server:
 npm i web-push
 npm i @types/web-push -D
+-----
+
+Aula Extra - Mobile
+npx expo install expo-notifications
